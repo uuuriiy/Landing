@@ -1,0 +1,19 @@
+@import "./containerTemplate";
+@import "../font/font";
+
+// colors
+$black: #111111;
+$green: #3A6150;
+
+// break points
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1080px;
+
+// page width
+$main-max-width: 1312px;
+
+// general styles
+body {
+    @include containerTemplate($main-max-width);
+}
