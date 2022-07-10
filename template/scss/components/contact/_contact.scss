@@ -1,0 +1,234 @@
+@import "general";
+
+.contact {
+    padding: 80px 20px 120px;
+    background: $dark-green;
+
+    &__content {
+        @include containerTemplate($main-max-width);
+        display: flex;
+        background: $white;
+        border-radius: 12px;
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: url("../images/contact.png") no-repeat;
+            background-size: cover;
+            padding: 42px 48px 50px 42px;
+            border-radius: 12px;
+        }
+
+        form {
+            width: 100%;
+            padding: 48px 20px 48px 16px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        h1 {
+            padding-bottom: 16px;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        p {
+            padding-bottom: 58px;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        a {
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            text-decoration: none;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 38px;
+    }
+
+    &__form-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 26px 20px;
+        padding-bottom: 36px;
+    }
+
+    &__form-info-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            span {
+                color: $red;
+            }
+        }
+
+        input {
+            padding: 12px 6px;
+            border: 1px solid $black;
+            border-radius: 4px;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            &::placeholder {
+                color: rgba($black, .5);
+                font-family: $font-outfit;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        select {
+            position: absolute;
+            top: 54%;
+            left: 2px;
+            border: none;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &:nth-last-child(1) {
+            input {
+                padding-left: 60px;
+            }
+        }
+    }
+
+    &__form-radioButtons {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+
+    &__form-radioButtons-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        label {
+            color: $evinced-black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.15px;
+        }
+
+        input {
+            width: 18px;
+            height: 18px;
+            accent-color: $green;
+        }
+    }
+
+    &__form-message {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 36px;
+
+        label {
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        textarea {
+            padding: 12px 6px;
+            border: 1px solid $black;
+            border-radius: 4px;
+            resize: none;
+
+            &::placeholder {
+                color: rgba($black, .5);
+                font-family: $font-outfit;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__form-acceptTerms {
+        display: flex;
+        gap: 56px;
+        padding-bottom: 42px;
+    }
+
+    &__form-acceptTerms-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        label {
+            color: $evinced-black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        input {
+            width: 18px;
+            height: 18px;
+            accent-color: $green;
+        }
+    }
+
+    &__form-button-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__form-button {
+        @include buttonTemplate;
+        padding: 11px 40px;
+    }
+}

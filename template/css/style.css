@@ -449,27 +449,14 @@ textarea {
   font-family: "Outfit";
   src: url("../font/Outfit/Outfit-VariableFont_wght.ttf");
 }
-body {
-  margin: 0 auto;
-  max-width: 1312px;
-  width: 100%;
-}
-
-@font-face {
-  font-family: "Outfit";
-  src: url("../font/Outfit/Outfit-VariableFont_wght.ttf");
-}
-body {
-  margin: 0 auto;
-  max-width: 1312px;
-  width: 100%;
-}
-
 .header {
-  padding: 16px 0;
+  padding: 16px 20px;
   box-sizing: border-box;
 }
 .header__content {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -526,18 +513,24 @@ body {
 .header__nav ul a:hover::before {
   width: 100%;
 }
+.header__arrowDown {
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
 .header__arrowDown img {
   object-fit: contain;
   width: 100%;
   height: 100%;
 }
+.header__arrowDown:hover {
+  transform: scale(1.2);
+}
 .header__searchBar {
   display: flex;
 }
 .header__searchBar input {
-  padding: 10px 16px;
+  padding: 10px 146px 10px 16px;
   border: 2px solid #3A6150;
-  background: #FFFFFF;
 }
 .header__searchBar input::placeholder {
   color: rgba(58, 97, 80, 0.7);
@@ -549,4 +542,861 @@ body {
 .header__searchBar button {
   background: #3A6150;
   border: none;
+}
+.header__burger {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  .header {
+    padding: 16px 50px;
+  }
+  .header__nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header {
+    padding: 10px 30px;
+  }
+  .header__logo img {
+    max-width: 28px;
+    max-height: 28px;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__searchBar {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+  .header__burger img {
+    object-fit: contain;
+    max-width: 34px;
+    max-height: 34px;
+  }
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../font/Outfit/Outfit-VariableFont_wght.ttf");
+}
+.intro {
+  padding: 24px 20px 60px;
+  background: #F9F9F9;
+}
+.intro__content {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.intro__content img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.intro__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+.intro__info h1 {
+  padding-bottom: 24px;
+  color: #3A6150;
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+.intro__info h3 {
+  color: #3A6150;
+  font-family: "Outfit";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+.intro__info p {
+  padding: 0 100px 24px 0;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.intro__info button {
+  background: #3A6150;
+  border: 1px solid transparent;
+  color: #FFFFFF;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+  padding: 12px 64px;
+}
+.intro__info button:hover {
+  background: transparent;
+  color: #3A6150;
+  border: 1px solid #3A6150;
+}
+@media screen and (min-width: 320px) and (max-width: 1079px) {
+  .intro__info button {
+    transition: none;
+  }
+  .intro__info button:hover {
+    background: #3A6150;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  .intro__info h1 {
+    padding-bottom: 18px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .intro__info h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .intro__info p {
+    padding: 0 0 20px 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .intro__info button {
+    background: #3A6150;
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    font-family: "Outfit";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    transition: all 0.6s ease-in-out;
+    padding: 8px 64px;
+  }
+  .intro__info button:hover {
+    background: transparent;
+    color: #3A6150;
+    border: 1px solid #3A6150;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1079px) and (min-width: 320px) and (max-width: 1079px) {
+  .intro__info button {
+    transition: none;
+  }
+  .intro__info button:hover {
+    background: #3A6150;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro__info {
+    order: 1;
+  }
+  .intro__info h1 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .intro__info h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .intro__info p {
+    padding: 0 0 10px 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .intro__info button {
+    background: #3A6150;
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    font-family: "Outfit";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    transition: all 0.6s ease-in-out;
+    padding: 8px 64px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .intro__info button:hover {
+    background: transparent;
+    color: #3A6150;
+    border: 1px solid #3A6150;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (min-width: 320px) and (max-width: 1079px) {
+  .intro__info button {
+    transition: none;
+  }
+  .intro__info button:hover {
+    background: #3A6150;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+  }
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../font/Outfit/Outfit-VariableFont_wght.ttf");
+}
+.about {
+  padding: 80px 20px;
+}
+.about__content {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+  display: flex;
+  gap: 18px;
+}
+.about__item {
+  display: flex;
+  gap: 18px;
+  padding: 24px;
+  background: #3A6150;
+}
+.about__info h4 {
+  padding-bottom: 12px;
+  color: #FFFFFF;
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.about__info p {
+  padding-bottom: 22px;
+  color: #FFFFFF;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.about__info a {
+  color: #FFFFFF;
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: none;
+}
+.about__info a span {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  .about__content {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .about {
+    padding: 40px 20px;
+  }
+  .about__content {
+    flex-direction: column;
+  }
+  .about__content img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .about__item {
+    flex-direction: column;
+  }
+  .about__info h4 {
+    padding-bottom: 12px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .about__info p {
+    padding-bottom: 22px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .about__info a {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../font/Outfit/Outfit-VariableFont_wght.ttf");
+}
+.contact {
+  padding: 80px 20px 120px;
+  background: #71837B;
+}
+.contact__content {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+.contact__content aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("../images/contact.png") no-repeat;
+  background-size: cover;
+  padding: 42px 48px 50px 42px;
+  border-radius: 12px;
+}
+.contact__content form {
+  width: 100%;
+  padding: 48px 20px 48px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.contact__info h1 {
+  padding-bottom: 16px;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+.contact__info p {
+  padding-bottom: 58px;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.contact__link a {
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: none;
+}
+.contact__icons {
+  display: flex;
+  gap: 38px;
+}
+.contact__form-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 26px 20px;
+  padding-bottom: 36px;
+}
+.contact__form-info-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contact__form-info-item label {
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-info-item label span {
+  color: #FF0000;
+}
+.contact__form-info-item input {
+  padding: 12px 6px;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-info-item input::placeholder {
+  color: rgba(17, 17, 17, 0.5);
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-info-item select {
+  position: absolute;
+  top: 54%;
+  left: 2px;
+  border: none;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-info-item:nth-last-child(1) input {
+  padding-left: 60px;
+}
+.contact__form-radioButtons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.contact__form-radioButtons-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact__form-radioButtons-item label {
+  color: #131516;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+.contact__form-radioButtons-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: #3A6150;
+}
+.contact__form-message {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 36px;
+}
+.contact__form-message label {
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-message textarea {
+  padding: 12px 6px;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  resize: none;
+}
+.contact__form-message textarea::placeholder {
+  color: rgba(17, 17, 17, 0.5);
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-acceptTerms {
+  display: flex;
+  gap: 56px;
+  padding-bottom: 42px;
+}
+.contact__form-acceptTerms-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact__form-acceptTerms-item label {
+  color: #131516;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__form-acceptTerms-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: #3A6150;
+}
+.contact__form-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact__form-button {
+  background: #3A6150;
+  border: 1px solid transparent;
+  color: #FFFFFF;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+  padding: 11px 40px;
+}
+.contact__form-button:hover {
+  background: transparent;
+  color: #3A6150;
+  border: 1px solid #3A6150;
+}
+@media screen and (min-width: 320px) and (max-width: 1079px) {
+  .contact__form-button {
+    transition: none;
+  }
+  .contact__form-button:hover {
+    background: #3A6150;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  .contact {
+    padding: 60px 20px;
+  }
+  .contact__content {
+    flex-direction: column;
+  }
+  .contact__content aside {
+    order: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+  .contact__content form {
+    max-width: 95%;
+  }
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__info h1 {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .contact__info p {
+    padding-bottom: 40px;
+  }
+  .contact__links {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contact {
+    padding: 60px 20px;
+  }
+  .contact__content {
+    flex-direction: column;
+  }
+  .contact__content aside {
+    order: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 22px 28px 30px 22px;
+  }
+  .contact__content form {
+    max-width: 90%;
+  }
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__info h1 {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .contact__info p {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .contact__form-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 26px 20px;
+    padding-bottom: 36px;
+  }
+  .contact__form-radioButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .contact__form-button-container {
+    justify-content: center;
+  }
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../font/Outfit/Outfit-VariableFont_wght.ttf");
+}
+.footer {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer__info {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.footer__subscribe {
+  padding-left: 20px;
+}
+.footer__subscribe h1 {
+  padding-bottom: 20px;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+}
+.footer__subscribe p {
+  padding-bottom: 30px;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+.footer__subscribeBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+.footer__subscribeBar input {
+  width: 100%;
+  padding-bottom: 11px;
+  border: none;
+  border-bottom: 1px solid #111111;
+}
+.footer__subscribeBar button {
+  background: #3A6150;
+  border: 1px solid transparent;
+  color: #FFFFFF;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+  padding: 11px 58px;
+  line-height: 22px;
+}
+.footer__subscribeBar button:hover {
+  background: transparent;
+  color: #3A6150;
+  border: 1px solid #3A6150;
+}
+@media screen and (min-width: 320px) and (max-width: 1079px) {
+  .footer__subscribeBar button {
+    transition: none;
+  }
+  .footer__subscribeBar button:hover {
+    background: #3A6150;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+  }
+}
+.footer__links {
+  display: flex;
+  box-sizing: border-box;
+}
+.footer__links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer__links ul a {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+.footer__links ul a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #3A6150;
+  transition: width 0.5s ease-out;
+}
+.footer__links ul a:hover {
+  opacity: 0.8;
+}
+.footer__links ul a:hover::before {
+  width: 100%;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+.footer__contact h4 {
+  padding-bottom: 8px;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+.footer__contact a {
+  padding-bottom: 8px;
+  color: rgba(17, 17, 17, 0.6);
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+.footer__contact a:nth-child(2) {
+  text-decoration: none;
+}
+.footer__contact-payments {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding-top: 32px;
+}
+.footer__copyright-wrapper {
+  padding-top: 24px;
+  border-top: 1px solid #E9E9E9;
+}
+.footer__copyright {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.footer__copyright-title {
+  flex: 0.65;
+  display: flex;
+  justify-content: flex-end;
+  color: #111111;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+.footer__copyright-items {
+  flex: 0.35;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-right: 20px;
+}
+.footer__copyright-item {
+  color: rgba(17, 17, 17, 0.5);
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  .footer__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .footer__subscribe {
+    display: none;
+  }
+  .footer__links {
+    justify-self: center;
+  }
+  .footer__links ul a:hover {
+    opacity: 1;
+  }
+  .footer__links ul a:hover::before {
+    width: 0;
+  }
+  .footer__contact {
+    justify-self: center;
+  }
+  .footer__copyright {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .footer__subscribe {
+    display: none;
+  }
+  .footer__links {
+    justify-self: center;
+  }
+  .footer__links ul a {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .footer__links ul a:hover {
+    opacity: 1;
+  }
+  .footer__links ul a:hover::before {
+    width: 0;
+  }
+  .footer__contact {
+    justify-self: center;
+  }
+  .footer__contact h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .footer__contact a {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .footer__contact-payments {
+    padding-top: 10px;
+  }
+  .footer__copyright {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__copyright-title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .footer__copyright-items {
+    padding-right: 0;
+  }
+  .footer__copyright-item {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
 }

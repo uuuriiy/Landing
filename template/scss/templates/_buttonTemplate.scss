@@ -1,0 +1,29 @@
+// button container
+
+@mixin buttonTemplate {
+    background: $green;
+    border: 1px solid transparent;
+    color: $white;
+    font-family: $font-outfit;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    transition: all .6s ease-in-out;
+
+    &:hover {
+        background: transparent;
+        color: $green;
+        border: 1px solid $green;
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: calc($desktop - 1px)) {
+        transition: none;
+
+        &:hover {
+            background: $green;
+            color: $white;
+            border: 1px solid transparent;
+        }
+    }
+}

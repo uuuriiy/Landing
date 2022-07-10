@@ -1,0 +1,52 @@
+@import "general";
+
+.about {
+    padding: 80px 20px;
+
+    &__content {
+        @include containerTemplate($main-max-width);
+        display: flex;
+        gap: 18px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 18px;
+        padding: 24px;
+        background: $green;
+    }
+
+    &__info {
+
+        h4 {
+            padding-bottom: 12px;
+            color: $white;
+            font-family: $font-outfit;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        p {
+            padding-bottom: 22px;
+            color: $white;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        a {
+            color: $white;
+            font-family: $font-outfit;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            text-decoration: none;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}

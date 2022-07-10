@@ -1,9 +1,16 @@
-@import "./containerTemplate";
+@import "./templates/containerTemplate";
+@import "./templates/buttonTemplate";
 @import "../font/font";
 
 // colors
 $black: #111111;
+$evinced-black: #131516;
 $green: #3A6150;
+$dark-green: #71837B;
+$grey: #F9F9F9;
+$dark-grey: #E9E9E9;
+$white: #FFFFFF;
+$red: #FF0000;
 
 // break points
 $mobile: 320px;
@@ -12,8 +19,3 @@ $desktop: 1080px;
 
 // page width
 $main-max-width: 1312px;
-
-// general styles
-body {
-    @include containerTemplate($main-max-width);
-}

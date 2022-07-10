@@ -1,0 +1,170 @@
+@import "general";
+
+.footer {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+
+    &__info {
+        @include containerTemplate($main-max-width);
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+    }
+
+    &__subscribe {
+        padding-left: 20px;
+
+        h1 {
+            padding-bottom: 20px;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        p {
+            padding-bottom: 30px;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+
+    &__subscribeBar {
+        display: flex;
+        align-items: flex-end;
+        gap: 30px;
+
+        input {
+            width: 100%;
+            padding-bottom: 11px;
+            border: none;
+            border-bottom: 1px solid $black;
+        }
+
+        button {
+            @include buttonTemplate;
+            padding: 11px 58px;
+            line-height: 22px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        box-sizing: border-box;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            a {
+                position: relative;
+                text-decoration: none;
+                color: $black;
+                font-family: $font-outfit;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    width: 0;
+                    height: 2px;
+                    background-color: $green;
+                    transition: width 0.5s ease-out;
+                }
+
+                &:hover {
+                    opacity: .8;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+
+        h4 {
+            padding-bottom: 8px;
+            color: $black;
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        a {
+            padding-bottom: 8px;
+            color: rgba($black, .6);
+            font-family: $font-outfit;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            &:nth-child(2) {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__contact-payments {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        padding-top: 32px;
+    }
+
+    &__copyright-wrapper {
+        padding-top: 24px;
+        border-top: 1px solid $dark-grey;
+    }
+
+    &__copyright {
+        @include containerTemplate($main-max-width);
+        display: flex;
+        align-items: center;
+    }
+
+    &__copyright-title {
+        flex: .65;
+        display: flex;
+        justify-content: flex-end;
+        color: $black;
+        font-family: $font-outfit;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    &__copyright-items {
+        flex: .35;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+        padding-right: 20px;
+    }
+
+    &__copyright-item {
+        color: rgba($black, .5);
+        font-family: $font-outfit;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+}

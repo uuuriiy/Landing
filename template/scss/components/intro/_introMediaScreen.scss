@@ -1,0 +1,64 @@
+@media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    .intro {
+        &__info {
+            h1 {
+                padding-bottom: 18px;
+                font-size: 28px;
+                line-height: 38px;
+            }
+
+            h3 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            p {
+                padding: 0 0 20px 0;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            button {
+                @include buttonTemplate;
+                padding: 8px 64px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $mobile) and (max-width: calc($tablet - 1px)) {
+    .intro {
+        &__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__info {
+            order: 1;
+
+            h1 {
+                padding-bottom: 10px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            h3 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            p {
+                padding: 0 0 10px 0;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            button {
+                @include buttonTemplate;
+                padding: 8px 64px;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+}
